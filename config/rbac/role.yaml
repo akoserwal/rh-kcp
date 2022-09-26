@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests/status
+  verbs:
+  - get
+  - patch
+  - update

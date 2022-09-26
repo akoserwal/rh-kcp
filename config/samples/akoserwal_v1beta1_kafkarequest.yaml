@@ -1,0 +1,6 @@
+apiVersion: akoserwal.rh-kcp/v1beta1
+kind: KafkaRequest
+metadata:
+  name: kafkarequest-sample
+spec:
+  # TODO(user): Add fields here

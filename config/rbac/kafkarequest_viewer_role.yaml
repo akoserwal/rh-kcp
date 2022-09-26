@@ -1,0 +1,20 @@
+# permissions for end users to view kafkarequests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kafkarequest-viewer-role
+rules:
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit kafkarequests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kafkarequest-editor-role
+rules:
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - akoserwal.rh-kcp
+  resources:
+  - kafkarequests/status
+  verbs:
+  - get

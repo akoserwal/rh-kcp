@@ -1,0 +1,16 @@
+domain: rh-kcp
+layout:
+- go.kubebuilder.io/v4-alpha
+projectName: rh-kcp
+repo: akoserwal/rh-kcp
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: rh-kcp
+  group: akoserwal
+  kind: KafkaRequest
+  path: akoserwal/rh-kcp/api/v1beta1
+  version: v1beta1
+version: "3"
